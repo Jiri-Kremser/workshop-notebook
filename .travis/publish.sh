@@ -1,6 +1,7 @@
 #!/bin/bash
+set -x
 
-_results_file="./all-results.perf"
+_results_file="./all.perf"
 
 if [ -n "$TRAVIS_PULL_REQUEST" ] && [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ -f "$_results_file" ]; then
   echo -e "Commenting on PR with the results"

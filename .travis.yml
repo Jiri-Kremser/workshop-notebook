@@ -1,6 +1,9 @@
 sudo: required
 services:
 - docker
+cache:
+  directories:
+  - /var/lib/docker/image
 script:
 - make build
 - make test
